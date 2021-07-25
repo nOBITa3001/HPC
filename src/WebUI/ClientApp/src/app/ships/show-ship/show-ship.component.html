@@ -1,0 +1,35 @@
+<nb-card>
+  <nb-card-header>
+    Ships
+    <button nbButton status="primary" (click)="addClick()"><nb-icon icon="plus-circle-outline" [options]="{ animation: { type: 'pulse' } }"></nb-icon></button>
+  </nb-card-header>
+
+  <nb-card-body>
+
+    <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Code</th>
+              <th>Length</th>
+              <th>Width</th>
+              <th>Created</th>
+              <th>Modified</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tr *ngFor="let item of list">
+          <td (click)="editClick(item)">{{item.name}}</td>
+          <td (click)="editClick(item)">{{item.code}}</td>
+          <td (click)="editClick(item)">{{item.lengthInMetres}} m.</td>
+          <td (click)="editClick(item)">{{item.widthInMetres}} m.</td>
+          <td (click)="editClick(item)">{{item.createdInUtc | date:'medium' }}</td>
+          <td (click)="editClick(item)">{{item.modifiedInUtc | date:'medium' }}</td>
+          <td>
+            <button nbButton ghost status="danger" (click)="deleteClick(item)"><nb-icon icon="trash-2-outline" [options]="{ animation: { type: 'pulse' } }"></nb-icon></button>
+            <button nbButton ghost status="info" (click)="editClick(item)"><nb-icon icon="edit-2-outline" [options]="{ animation: { type: 'pulse' } }"></nb-icon></button>
+          </td>
+      </tr>
+    </table>
+  </nb-card-body>
+</nb-card>
