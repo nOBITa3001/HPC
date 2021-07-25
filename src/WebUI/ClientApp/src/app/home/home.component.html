@@ -1,0 +1,95 @@
+<nb-card>
+  <nb-card-body>
+    <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="HPC_0"></a>HPC</h1>
+<h2 class="code-line" data-line-start=2 data-line-end=3 ><a id="Technologies_2"></a>Technologies</h2>
+<ul>
+<li class="has-line-data" data-line-start="4" data-line-end="5"><a href="https://dotnet.microsoft.com/download/dotnet/5.0">ASP.NET Core 5</a></li>
+<li class="has-line-data" data-line-start="5" data-line-end="6"><a href="https://docs.microsoft.com/en-us/ef/core/">Entity Framework Core 5</a></li>
+<li class="has-line-data" data-line-start="6" data-line-end="7"><a href="https://angular.io/">Angular 12</a></li>
+<li class="has-line-data" data-line-start="7" data-line-end="8"><a href="https://github.com/akveo/ngx-admin">ngx-admin</a></li>
+<li class="has-line-data" data-line-start="8" data-line-end="9"><a href="https://github.com/jbogard/MediatR">MediatR</a></li>
+<li class="has-line-data" data-line-start="9" data-line-end="10"><a href="https://automapper.org/">AutoMapper</a></li>
+<li class="has-line-data" data-line-start="10" data-line-end="11"><a href="https://fluentvalidation.net/">FluentValidation</a></li>
+<li class="has-line-data" data-line-start="11" data-line-end="12"><a href="https://nunit.org/">NUnit</a>, <a href="https://fluentassertions.com/">FluentAssertions</a>, <a href="https://github.com/moq">Moq</a> &amp; <a href="https://github.com/jbogard/Respawn">Respawn</a></li>
+<li class="has-line-data" data-line-start="12" data-line-end="14"><code>TODO:</code> <s><a href="https://www.docker.com/">Docker</a></s></li>
+</ul>
+<h2 class="code-line" data-line-start=14 data-line-end=15 ><a id="Getting_Started_14"></a>Getting Started</h2>
+<h3 class="code-line" data-line-start=16 data-line-end=17 ><a id="Command_16"></a>Command</h3>
+<ol>
+<li class="has-line-data" data-line-start="18" data-line-end="19">Install the latest <a href="https://dotnet.microsoft.com/download/dotnet/5.0">.NET 5 SDK</a></li>
+<li class="has-line-data" data-line-start="19" data-line-end="20">Install the latest <a href="https://nodejs.org/en/">Node.js LTS</a> or <a href="https://github.com/nvm-sh/nvm">nvm</a> / <a href="https://github.com/coreybutler/nvm-windows">nvm-windows</a></li>
+<li class="has-line-data" data-line-start="20" data-line-end="21">Navigate to <code>src/WebUI/ClientApp</code> and run <code>npm install</code></li>
+<li class="has-line-data" data-line-start="21" data-line-end="22">Navigate to <code>src/WebUI/ClientApp</code> and run <code>npm start</code> to launch the front end (Angular)</li>
+<li class="has-line-data" data-line-start="22" data-line-end="23">Navigate to <code>src/WebUI</code> and run <code>dotnet run</code> to launch the back end (<a href="http://ASP.NET">ASP.NET</a> Core Web API)</li>
+<li class="has-line-data" data-line-start="23" data-line-end="24">Go to <a href="https://localhost:5001/">https://localhost:5001/</a></li>
+<li class="has-line-data" data-line-start="24" data-line-end="26">Demo user: <code>admin@hpc.io</code> / <code>P@ssw0rd</code></li>
+</ol>
+<h3 class="code-line" data-line-start=26 data-line-end=27 ><a id="Visual_Studio_26"></a>Visual Studio</h3>
+<p class="has-line-data" data-line-start="28" data-line-end="29"><code>TODO:</code></p>
+<h3 class="code-line" data-line-start=30 data-line-end=31 ><a id="Testing_30"></a>Testing</h3>
+<p class="has-line-data" data-line-start="32" data-line-end="33">Go to <code>root</code> folder: <code>~\workspace\HPC\</code></p>
+<pre><code class="has-line-data" data-line-start="35" data-line-end="37">$ dotnet test HPC.sln
+</code></pre>
+<h3 class="code-line" data-line-start=38 data-line-end=39 ><a id="Docker_Configuration_38"></a>Docker Configuration</h3>
+<p class="has-line-data" data-line-start="40" data-line-end="41"><code>TODO:</code></p>
+<h2 class="code-line" data-line-start=42 data-line-end=43 ><a id="Database_Configuration_42"></a>Database Configuration</h2>
+<p class="has-line-data" data-line-start="44" data-line-end="45">The template is configured to use an in-memory database by default for development purpose. This ensures that all users will be able to run the solution without needing to set up additional infrastructure (e.g. SQL Server).</p>
+<p class="has-line-data" data-line-start="46" data-line-end="47">When you run the application the database will be automatically created (if necessary) and the latest migrations will be applied.</p>
+<h2 class="code-line" data-line-start=48 data-line-end=49 ><a id="Database_Migrations_48"></a>Database Migrations</h2>
+<p class="has-line-data" data-line-start="50" data-line-end="51">To use <code>dotnet-ef</code> for your migrations please add the following flags to your command (values assume you are executing from repository root)</p>
+<ul>
+<li class="has-line-data" data-line-start="52" data-line-end="53"><code>--project src/Infrastructure</code> (optional if in this folder)</li>
+<li class="has-line-data" data-line-start="53" data-line-end="54"><code>--startup-project src/WebUI</code></li>
+<li class="has-line-data" data-line-start="54" data-line-end="56"><code>--output-dir Persistence/Migrations</code></li>
+</ul>
+<p class="has-line-data" data-line-start="56" data-line-end="57">For example, to add a new migration from the <code>src</code> folder: <code>~\workspace\HPC\src\</code></p>
+<p class="has-line-data" data-line-start="58" data-line-end="59"><strong><em>Add a new migration</em></strong></p>
+<pre><code class="has-line-data" data-line-start="61" data-line-end="63">$ dotnet ef migrations add AddShipEntity -p src\Infrastructure -s src\WebUI -o Persistence\Migrations
+</code></pre>
+<p class="has-line-data" data-line-start="64" data-line-end="65"><strong><em>Update database</em></strong></p>
+<pre><code class="has-line-data" data-line-start="67" data-line-end="70">$ dotnet ef database update -p src\Infrastructure -s src\WebUI
+$ dotnet ef database update InitialCreateWithIdentity -p src\Infrastructure -s src\WebUI
+</code></pre>
+<p class="has-line-data" data-line-start="71" data-line-end="72"><strong><em>Remove the latest migration</em></strong></p>
+<pre><code class="has-line-data" data-line-start="74" data-line-end="76">$  dotnet ef migrations remove -p src\Infrastructure -s src\WebUI
+</code></pre>
+<h2 class="code-line" data-line-start=77 data-line-end=78 ><a id="Angular_CLI_77"></a>Angular CLI</h2>
+<p class="has-line-data" data-line-start="79" data-line-end="80">If you want to add a new angular component, server, or model, follow below commands</p>
+<p class="has-line-data" data-line-start="81" data-line-end="82"><strong><em>Add a new component and child components</em></strong></p>
+<pre><code class="has-line-data" data-line-start="84" data-line-end="88">$ ng g c ships -s --skip-tests --module app
+$ ng g c ships/show-ship -s --skip-tests --module app
+$ ng g c ships/add-edit-ship -s --skip-tests --module app
+</code></pre>
+<p class="has-line-data" data-line-start="89" data-line-end="90"><strong><em>Add a new service</em></strong></p>
+<pre><code class="has-line-data" data-line-start="92" data-line-end="94">$ ng g s shared/ship --skip-tests
+</code></pre>
+<p class="has-line-data" data-line-start="95" data-line-end="96"><strong><em>Add a new model</em></strong></p>
+<pre><code class="has-line-data" data-line-start="98" data-line-end="100">$ ng g class shared/ship --type=model --skip-tests
+</code></pre>
+<h2 class="code-line" data-line-start=101 data-line-end=102 ><a id="Troubleshooting_101"></a>Troubleshooting</h2>
+<ul>
+<li class="has-line-data" data-line-start="103" data-line-end="109">
+<p class="has-line-data" data-line-start="103" data-line-end="104">warning: <code>The EF Core tools version '3.x.x' is older than that of the runtime '5.0.8'. Update the tools for the latest features and bug fixes.</code></p>
+<pre><code class="has-line-data" data-line-start="106" data-line-end="108">$ dotnet tool update --global dotnet-ef
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="109" data-line-end="115">
+<p class="has-line-data" data-line-start="109" data-line-end="110">Unable to resolve service for type <code>'Microsoft.EntityFrameworkCore.Migrations.IMigrator'</code>. This is often because no database provider has been configured for this DbContext. A provider can be configured by overriding the ‘DbContext.OnConfiguring’ method or by using ‘AddDbContext’ on the application service provider. If ‘AddDbContext’ is used, then also ensure that your DbContext type accepts a DbContextOptions&lt;TContext&gt; object in its constructor and passes it to the base constructor for DbContext.</p>
+<pre><code class="has-line-data" data-line-start="112" data-line-end="114">$ use Database instead of InMemory by configuring '&quot;UseInMemoryDatabase&quot;: false' in appsetting.json
+</code></pre>
+</li>
+<li class="has-line-data" data-line-start="115" data-line-end="117">
+<p class="has-line-data" data-line-start="115" data-line-end="116">Get 500 internal server error after restart application and you are using <code>UseInMemoryDatabase</code>, try to clear browser’s cookie. This may relate to logged in User Id from seeded data has gone</p>
+</li>
+</ul>
+<h2 class="code-line" data-line-start=117 data-line-end=118 ><a id="Overview_117"></a>Overview</h2>
+<h3 class="code-line" data-line-start=119 data-line-end=120 ><a id="Domain_119"></a>Domain</h3>
+<p class="has-line-data" data-line-start="121" data-line-end="122">This will contain all entities, events, and logic specific to the domain layer.</p>
+<h3 class="code-line" data-line-start=123 data-line-end=124 ><a id="Application_123"></a>Application</h3>
+<p class="has-line-data" data-line-start="125" data-line-end="126">The biggest layer containing all application logic that is dependent on the domain layer, but has no dependencies on any other layer or project. This layer defines interfaces that are implemented by outside layers. For example, if the application needs to access a notification service, a new interface would be added to the application and implementation would be created within Infrastructure.</p>
+<h3 class="code-line" data-line-start=127 data-line-end=128 ><a id="Infrastructure_127"></a>Infrastructure</h3>
+<p class="has-line-data" data-line-start="129" data-line-end="130">This layer contains classes for accessing external resources such as database, file systems, web services, smtp, and so on. These classes should be based on interfaces defined within the application layer. Moreover, this layer will publish all registered events on each request.</p>
+<h3 class="code-line" data-line-start=131 data-line-end=132 ><a id="WebUI_131"></a>WebUI</h3>
+<p class="has-line-data" data-line-start="133" data-line-end="134">This layer is a single-page application based on Angular 12 and <a href="http://ASP.NET">ASP.NET</a> Core 5. This layer depends on both the Application and Infrastructure layers, however, the dependency on Infrastructure is only to support dependency injection. Therefore only <em>Startup.cs</em> should reference Infrastructure.</p>
+  </nb-card-body>
+</nb-card>
